@@ -1,5 +1,11 @@
 #include "monty.h"
-
+/**
+ * main - Entry point of the interpreter.
+ * @argc: Number of commmand line arguments.
+ * @argv: Values of the arguments.
+ *
+ * Return: Return with an exist code success
+ */
 int main(int argc, char *argv[])
 {
 	FILE *file;

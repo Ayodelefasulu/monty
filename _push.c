@@ -1,4 +1,9 @@
 #include "monty.h"
+/**
+ * push - Add elements to the top of stack.
+ * @stack: Double pointer to the top of the stack.
+ * @line_number: Line number in the Monty byte code file.
+ */
 
 void push(stack_t **stack, unsigned int line_number)
 {

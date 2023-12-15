@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * is_integer - Checks if a string represents an integer.
+ * _isinteger - Checks if a string represents an integer.
  * @str: String to check.
  * Return: 1 if it's an integer, 0 otherwise.
  */

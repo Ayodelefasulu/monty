@@ -1,5 +1,12 @@
 #include "monty.h"
 
+/**
+ * parser - This is where parsing of the program occurs
+ * @file: File to be parsed
+ * @stack: The top of the stack
+ */
+
+void parser(FILE *file, stack_t **stack);
 void parser(FILE *file, stack_t **stack)
 {
 	char line[100];
@@ -15,6 +22,10 @@ void parser(FILE *file, stack_t **stack)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"sub", sub},
+		{"div", div_op},
+		{"mul", mul_op},
+		{"mod", mod_op},
 		{NULL, NULL}
 	};
 
@@ -37,7 +48,13 @@ void parser(FILE *file, stack_t **stack)
 		{
 			/* Empty line, skip to the next iteration */
 			continue;
-        	}
+		}
+
+		if (token[0] == '#')
+                {
+                        /* skip to the next iteration */
+                        continue;
+                }
 
 		/* Extract opcode */
 		opcode = token;
@@ -49,7 +66,11 @@ void parser(FILE *file, stack_t **stack)
 			strcmp(opcode, instructions[3].opcode) != 0 &&
 			strcmp(opcode, instructions[4].opcode) != 0 &&
 			strcmp(opcode, instructions[5].opcode) != 0 &&
-			strcmp(opcode, instructions[6].opcode) != 0)
+			strcmp(opcode, instructions[6].opcode) != 0 &&
+			strcmp(opcode, instructions[7].opcode) != 0 &&
+			strcmp(opcode, instructions[8].opcode) != 0 &&
+			strcmp(opcode, instructions[9].opcode) != 0 &&
+			strcmp(opcode, instructions[10].opcode) != 0)
 		{
 			printf("L%u: unknown instruction <%s>\n", line_number, opcode);
 		}

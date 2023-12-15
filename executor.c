@@ -1,6 +1,15 @@
 #include "monty.h"
-
-void exec(instruction_t *instructions, stack_t **stack, char *opcode, unsigned int line_number)
+/**
+ * exec - The brain box of the interpreter.
+ * @instructions: Instructions is linked, mapped with the functions
+ * @stack: Double pointer to the top of the stack.
+ * @opcode: The monty script operation code.
+ * @line_number: Line number in the Monty byte code file.
+ */
+void exec(instruction_t *instructions, stack_t **stack,
+	char *opcode, unsigned int line_number);
+void exec(instruction_t *instructions, stack_t **stack,
+	char *opcode, unsigned int line_number)
 {
 	int i;
 
