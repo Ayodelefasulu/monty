@@ -51,10 +51,10 @@ void parser(FILE *file, stack_t **stack)
 		}
 
 		if (token[0] == '#')
-                {
-                        /* skip to the next iteration */
-                        continue;
-                }
+		{
+			/* skip to the next iteration */
+			continue;
+		}
 
 		/* Extract opcode */
 		opcode = token;
