@@ -17,14 +17,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	/* Define opcode-function mapping */
-	/* instruction_t instructions[] = { */
-	/*	{"push", push}, */
-	/*	{"pall", pall}, */
-	/*	{NULL, NULL} */
-	/* }; */
-
-	/* Checking and opening the file */
+	/* checking and opening the file */
 	file = fopen(argv[1], "r");
 
 	if (file == NULL)
